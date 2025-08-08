@@ -10,13 +10,13 @@ const signupController = async (req, res) => {
         if (isExist) {
             return response.json({
                 status: false,
-                message: "Email Address Already Exist!",
+                message: "Email Already Exist!",
                 data: null
             })
         }
 
         if (!firstName || !lastName ||!email || !password) {
-            return res.status(400).json({
+            return res.status(401).json({
                 message: "required field are missing"
             })
         }

@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
     // restaurant: { type: mongoose.Schema.Types.ObjectId, ref: 'Restaurant' },
     roles: [{
         type: String,
-        enum: ["customer", "admin", "vendor"]
+        enum: ["user", "admin", "vendor"]
     }],
     isVerified: { type: Boolean, default: false },
     createdAt: { type: Date, default: Date.now() }
